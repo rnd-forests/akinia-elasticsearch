@@ -1,0 +1,17 @@
+---
+## Default Elasticsearch configuration from Elasticsearch base image.
+## https://github.com/elastic/elasticsearch/blob/master/distribution/docker/src/docker/config/elasticsearch.yml
+cluster.name: "akinia-cluster"
+network.host: 0.0.0.0
+
+# Indices settings
+indices.memory.index_buffer_size: 30%
+indices.memory.min_index_buffer_size: 512mb
+
+## Disable X-Pack
+## see https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html
+xpack.security.enabled: false
+xpack.monitoring.enabled: false
+xpack.ml.enabled: false
+xpack.graph.enabled: false
+xpack.watcher.enabled: false
